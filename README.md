@@ -10,8 +10,8 @@ A coursework assignment analyzing a cohort of 752 renal transplant patients to e
 
 ## What I did
 
-- **Missing data imputation** — identified which variables had missing values (`dgf`, `creat`, `predias`, `uprotein`, `cregsh`), correctly typed each for imputation (numeric vs. categorical), and ran Multiple Imputation by Chained Equations (MICE) via `miceforest` (random-forest-based) to generate 5 complete versions of the dataset (`imputed_data_0.csv` – `imputed_data_4.csv`) using distinct random seeds, for downstream pooled analysis.
-- **Full statistical analysis and results report** — (co-authored with Tyenca de Graf) `renal_transplant_graft_rejection_report.pdf` is the written results section covering:
+- **Missing data imputation**: identified which variables had missing values (`dgf`, `creat`, `predias`, `uprotein`, `cregsh`), correctly typed each for imputation (numeric vs. categorical), and ran Multiple Imputation by Chained Equations (MICE) via `miceforest` (random-forest-based) to generate 5 complete versions of the dataset (`imputed_data_0.csv` – `imputed_data_4.csv`) using distinct random seeds, for downstream pooled analysis.
+- **Full statistical analysis and results report**: (co-authored with Tyenca de Graf) `renal_transplant_graft_rejection_report.pdf` is the written results section covering:
   - A competing-risk check confirming no patients died with a functioning graft, justifying a standard Cox proportional hazards model over a full competing-risks approach for the primary analysis (with a Fine-Gray model run as a supplementary check).
   - Baseline characteristics stratified by outcome, and univariable Cox regression for each candidate risk factor.
   - Multivariable Cox regression with systematic assumption-checking: multicollinearity (VIF), linearity of continuous predictors (Martingale residuals plus a spline vs. linear likelihood ratio test), and the proportional hazards assumption (scaled Schoenfeld residuals).
@@ -20,8 +20,8 @@ A coursework assignment analyzing a cohort of 752 renal transplant patients to e
 
 ## Data
 
-- `data/renaltx.csv` — raw cohort data (752 patients): graft-rejection status and follow-up time, patient death status and follow-up time, and the 8 candidate risk factors.
-- `data/imputed_data_0.csv` – `imputed_data_4.csv` — 5 MICE-imputed complete versions of the dataset.
+- `data/renaltx.csv`: raw cohort data (752 patients): graft-rejection status and follow-up time, patient death status and follow-up time, and the 8 candidate risk factors.
+- `data/imputed_data_0.csv` – `imputed_data_4.csv`: 5 MICE-imputed complete versions of the dataset.
 
 ## Tools
 
